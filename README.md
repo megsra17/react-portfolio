@@ -45,6 +45,13 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+## Live Demo
+[Portfolio site](https://megsra17.github.io/react-portfolio/)
+
+![This is an image of my project](https://github.com/megsra17/react-portfolio/blob/main/Screenshot%202023-01-31%20at%209.54.04%20PM.png)
+
+
+
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
