@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/linkedin.svg";
 import navIcon2 from "../assets/img/github.svg";
@@ -27,83 +26,86 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-      <Container>
-        <Navbar.Brand href="/">
-          <img src={logo} alt="Logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto text-white">
-            <Nav.Link
-              href="#home"
+    <nav className={`navbar navbar-expand-lg`}>
+      <div className="container">
+        <img className="navbar-brand" src={logo} alt="Logo" />
+        <ul className="navbar-nav">
+          <li className="nav-item px-3">
+            <a
+              onClick={() => onUpdateActiveLink("home")}
               className={
                 activeLink === "home" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("home")}
+              href="#home"
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
+            </a>
+          </li>
+          <li className="nav-item px-3">
+            <a
+              onClick={() => onUpdateActiveLink("skills")}
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("skills")}
+              href="#skills"
             >
               Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
+            </a>
+          </li>
+          <li className="nav-item px-3">
+            <a
+              onClick={() => onUpdateActiveLink("projects")}
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("projects")}
+              href="#projects"
             >
               Projects
-            </Nav.Link>
-            <Nav.Link
-              href="#contact"
+            </a>
+          </li>
+          <li className="nav-item px-3">
+            <a
+              onClick={() => onUpdateActiveLink("contact")}
               className={
                 activeLink === "contact" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("contact")}
+              href="#contact"
             >
               Contact
-            </Nav.Link>
-            <Nav.Link
-              href="#resume"
+            </a>
+          </li>
+          <li className="nav-item px-3">
+            <a
+              onClick={() => onUpdateActiveLink("resume")}
               className={
                 activeLink === "resume" ? "active navbar-link" : "navbar-link"
               }
-              onClick={() => onUpdateActiveLink("resume")}
+              href="#resume"
             >
               Resume
-            </Nav.Link>
-          </Nav>
-          <span className="navbar-text">
-            <div className="social-icon">
-              <a
-                href="https://www.linkedin.com/in/megan-rakow-84a236191/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={navIcon1} alt="" />
-              </a>
-              <a
-                href="https://github.com/megsra17"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={navIcon2} alt="" />
-              </a>
-            </div>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            </a>
+          </li>
+        </ul>
+        <span className="navbar-text">
+          <div className="social-icon">
+            <a
+              href="https://www.linkedin.com/in/megan-rakow-84a236191/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={navIcon1} alt="" />
+            </a>
+            <a
+              href="https://github.com/megsra17"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={navIcon2} alt="" />
+            </a>
+          </div>
+        </span>
+      </div>
+    </nav>
   );
 };
 
