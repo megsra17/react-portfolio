@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/logo.svg";
+import logo from "../assets/img/logo.png";
 import navIcon1 from "../assets/img/linkedin.svg";
 import navIcon2 from "../assets/img/github.svg";
 
@@ -63,6 +63,15 @@ const NavBar = () => {
               onClick={() => onUpdateActiveLink("projects")}
             >
               Projects
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className={
+                activeLink === "contact" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("contact")}
+            >
+              Contact
             </Nav.Link>
             <Nav.Link
               href="#resume"

@@ -64,6 +64,10 @@ nav.navbar a.navbar-brand {
   width: 9%;
 }
 
+.navbar-brand img {
+  width: 100px;
+}
+
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
   opacity: 1;
@@ -150,7 +154,7 @@ span.navbar-text {
   display: inline-block;
 }
 
-.banner button {
+.banner a {
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -167,8 +171,9 @@ span.navbar-text {
   border: 0px solid #91c9ff;
   outline: none;
   transition: 1s ease-in-out;
+  width: 200px;
 }
-.banner button:hover {
+.banner a:hover {
   transition: 1s ease-in-out;
   background: #4f95da;
 }
@@ -273,6 +278,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+.project-card {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  overflow: hidden;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561);
+}
+
+.project-card .btn {
+  background: linear-gradient(
+    90deg,
+    rgba(170, 54, 124, 0.2539609593837535) 0%,
+    rgba(74, 47, 189, 0.24275647759103647) 37%,
+    rgba(3, 0, 14, 0) 65%
+  );
+  border: 1px solid white;
+}
+
+#contactBtn {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px;
+  letter-spacing: 0.8px;
+
+  align-items: center;
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+  border: 0px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+  width: 200px;
+}
+
+#contactBtn:hover {
+  transition: 1s ease-in-out;
+  background: #4f95da;
 }
 
 .App {

@@ -47,7 +47,7 @@ const Banner = () => {
           <div className="col-lg-7">
             <span className="tagline">Welcome to my Portfolio</span>
             <h1>
-              {`Hi I'm Megan `}
+              {`Hi I'm Megan A `}
               <span className="wrap">{text}</span>
             </h1>
             <p>
@@ -56,12 +56,12 @@ const Banner = () => {
               graduated UWW in 2021 with a Bachelor Degree in MAGD and minor in
               graphic design. I then moved up to Greenbay, Wisconsin and Im
               currently working for RC MOWERS USA.
-              <button onClick={() => console.log("connect")}>
-                Lets Connect <i class="bi bi-arrow-right ps-3"></i>
-              </button>
+              <a href="#contact">
+                Lets Connect <i className="bi bi-arrow-right ps-3"></i>
+              </a>
             </p>
           </div>
-          <div class="col-lg-5">
+          <div className="col-lg-5">
             <img src={headerImg} alt="flying man" />
           </div>
         </div>
