@@ -4,6 +4,8 @@ import Banner from "./components/Banner";
 import Skill from "./components/Skills";
 import Project from "./components/Projects";
 import Contact from "./components/Contact";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Skill />
       <Project />
       <Contact />
+      <Resume />
+      <Footer />
     </div>
   );
 }
