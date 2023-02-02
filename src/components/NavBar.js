@@ -5,28 +5,32 @@ import navIcon2 from "../assets/img/github.svg";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
+
+  const [stickyClass, setStickyClass] = useState("relative");
 
   useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
     };
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 50
+        ? setStickyClass("fixed-top left-0 z-50 bg-black")
+        : setStickyClass("relative");
+    }
+  };
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg`}>
+    <nav className={`navbar navbar-expand-lg ${stickyClass}`}>
       <div className="container">
         <img className="navbar-brand" src={logo} alt="Logo" />
         <ul className="navbar-nav">

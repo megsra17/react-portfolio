@@ -46,10 +46,6 @@ h6 {
   line-height: normal;
 }
 
-nav .navbar {
-  background: transparent;
-}
-
 nav a.active {
   text-decoration: none;
   color: #692a65;
@@ -64,16 +60,11 @@ nav a {
 
 nav .navbar {
   padding: 18px 0;
-  position: fixed;
   width: 100%;
   top: 0;
   z-index: 99;
   transition: 0.32 ease-in-out;
-}
-
-nav .navbar .scrolled {
-  padding: 0px 0;
-  background-color: #121212;
+  position: relative;
 }
 
 img.navbar-brand {
